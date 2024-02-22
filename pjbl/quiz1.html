@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Quiz</h1>
+  <div class="question">1.Orang yang memainkan wayang disebut?</div>
+  <div class="options">
+    <button class="option" onclick="checkAnswer('Dalang')">Dalang</button>
+    <button class="option" onclick="checkAnswer('Penonton')">Penonton</button>
+    <button class="option" onclick="checkAnswer('Gerak sendiri')">Gerak sendiri</button>
+    <button class="option" onclick="checkAnswer('Dhalhang')">Dhalhang</button>
+    <button type="submit"><a href="quiz2.html">Lanjut</a></button>
+  </div>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function checkAnswer(answer) {
+    var resultDiv = document.getElementById("result");
+    if (answer === "Dalang") {
+      resultDiv.textContent = "Jawaban Anda benar.";
+      resultDiv.style.color = "#4CAF50";
+    } else {
+      resultDiv.textContent = "Jawaban Salah. Jawaban Yang Benar Adalah Dalang.";
+      resultDiv.style.color = "#e74c3c";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Quiz</h1>
+  <div class="question">5.Kisah apa yang umumnya diangkat dalam pertunjukan wayang kulit di Indonesia?</div>
+  <div class="options">
+    <button class="option" onclick="checkAnswer('Mahabarata dan Ramayana')">Mahabarata dan Ramayana</button>
+    <button class="option" onclick="checkAnswer('PIliad dan Odyssey')">Iliad dan Odyssey</button>
+    <button class="option" onclick="checkAnswer('Arabian Nights')">Arabian Nights</button>
+    <button class="option" onclick="checkAnswer('Aeneid')"> Aeneid</button>
+    <button type="submit"><a href="user.html">kembali</a></button>
+  </div>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function checkAnswer(answer) {
+    var resultDiv = document.getElementById("result");
+    if (answer === "Mahabarata dan Ramayana") {
+      resultDiv.textContent = "Jawaban Anda benar.";
+      resultDiv.style.color = "#4CAF50";
+    } else {
+      resultDiv.textContent = "Jawaban Salah. Jawaban Yang Benar Adalah Mahabarata dan Ramayana.";
+      resultDiv.style.color = "#e74c3c";
+    }
+  }
+</script>
+
+</body>
+</html>

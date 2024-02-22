@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Quiz</h1>
+  <div class="question">2.Wayang golek berasal dari daerah manakah di Indonesia?</div>
+  <div class="options">
+    <button class="option" onclick="checkAnswer('Jawa')">Jawa</button>
+    <button class="option" onclick="checkAnswer('Bali')">Bali</button>
+    <button class="option" onclick="checkAnswer('Sumatera')">Sumatera</button>
+    <button class="option" onclick="checkAnswer('Kalimantan')">Kalimantan</button>
+    <button type="submit"><a href="quiz3.html">Lanjut</a></button>
+  </div>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function checkAnswer(answer) {
+    var resultDiv = document.getElementById("result");
+    if (answer === "Jawa") {
+      resultDiv.textContent = "Jawaban Anda benar.";
+      resultDiv.style.color = "#4CAF50";
+    } else {
+      resultDiv.textContent = "Jawaban Salah. Jawaban Yang Benar Adalah Dalang.";
+      resultDiv.style.color = "#e74c3c";
+    }
+  }
+</script>
+
+</body>
+</html>

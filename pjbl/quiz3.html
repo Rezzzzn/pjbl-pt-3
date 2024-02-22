@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Quiz</h1>
+  <div class="question">3.Manakah dari berikut yang bukan termasuk jenis wayang tradisional Indonesia?</div>
+  <div class="options">
+    <button class="option" onclick="checkAnswer('Wayang Kulit')">Wayang Kulit</button>
+    <button class="option" onclick="checkAnswer('Wayang Beber')">Wayang Beber</button>
+    <button class="option" onclick="checkAnswer('Wayang Orang')">Wayang Orang</button>
+    <button class="option" onclick="checkAnswer('Wayang Topeng')">Wayang Topeng</button>
+    <button type="submit"><a href="quiz4.html">Lanjut</a></button>
+  </div>
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function checkAnswer(answer) {
+    var resultDiv = document.getElementById("result");
+    if (answer === "Wayang Topeng") {
+      resultDiv.textContent = "Jawaban Anda benar.";
+      resultDiv.style.color = "#4CAF50";
+    } else {
+      resultDiv.textContent = "Jawaban Salah. Jawaban Yang Benar Adalah Wayang Topeng.";
+      resultDiv.style.color = "#e74c3c";
+    }
+  }
+</script>
+
+</body>
+</html>
